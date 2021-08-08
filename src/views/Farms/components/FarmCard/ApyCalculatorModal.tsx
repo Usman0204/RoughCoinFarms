@@ -37,7 +37,6 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   addLiquidityUrl,
 }) => {
   const TranslateString = useI18n()
-  console.log('cake price :::: ' , cakePrice , apy)
   const farmApy = apy.times(new BigNumber(100)).toNumber()
   const oneThousandDollarsWorthOfCake = 1000 / cakePrice.toNumber()
 
