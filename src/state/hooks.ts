@@ -63,7 +63,6 @@ export const useFarmFromSymbol = (lpSymbol: string): Farm => {
 
 export const useFarmUser = (pid) => {
   const farm = useFarmFromPid(pid)
-
   return {
     allowance: farm.userData ? new BigNumber(farm.userData.allowance) : new BigNumber(0),
     tokenBalance: farm.userData ? new BigNumber(farm.userData.tokenBalance) : new BigNumber(0),
@@ -97,14 +96,18 @@ export const usePoolFromPid = (sousId): Pool => {
 export const usePriceBnbBusd = (): BigNumber => {
   const pid = 2 // BUSD-BNB LP
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : ZERO
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
   const pid = 1 // CAKE-BNB LP
   const bnbPriceUSD = usePriceBnbBusd()
   const farm = useFarmFromPid(pid)
-  return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO
+  const ZERO1 = new BigNumber(0.00002)
+
+  // return farm.tokenPriceVsQuote ? bnbPriceUSD.times(farm.tokenPriceVsQuote) : ZERO1
+  return  ZERO1
+
 }
 
 export const usePriceEthBusd = (): BigNumber => {

@@ -30,7 +30,7 @@ export const useSousStake = (sousId, isUsingBnb = false) => {
 
   const handleStake = useCallback(
     async (amount: string, decimals: number) => {
-      if (sousId === 0) {
+      if (sousId >= 0) {
         await stake(masterChefContract, 0, amount, account)
       } else if (isUsingBnb) {
         await sousStakeBnb(sousChefContract, amount, account)

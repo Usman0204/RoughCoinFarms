@@ -37,6 +37,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   addLiquidityUrl,
 }) => {
   const TranslateString = useI18n()
+  console.log('cake price :::: ' , cakePrice , apy)
   const farmApy = apy.times(new BigNumber(100)).toNumber()
   const oneThousandDollarsWorthOfCake = 1000 / cakePrice.toNumber()
 
@@ -60,7 +61,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase" mb="20px">
-            {TranslateString(864, 'CANDY per $1000')}
+            {TranslateString(864, 'XRGE per $1000')}
           </Text>
         </GridItem>
         {/* 1 day row */}

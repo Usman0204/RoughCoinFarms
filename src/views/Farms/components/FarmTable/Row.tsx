@@ -138,7 +138,7 @@ const Row: React.FunctionComponent<RowProps> = (props) => {
           </tr>
           <tr>
             <EarnedMobileCell>
-              <CellLayout label={TranslateString(1072, 'Earned')}>
+              <CellLayout label= 'XRGE Earned'>
                 <Earned {...props.earned} />
               </CellLayout>
             </EarnedMobileCell>
