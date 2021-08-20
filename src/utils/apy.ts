@@ -17,7 +17,7 @@ export const getPoolApy = (
 ) => {
   const totalRewardPricePerYear = new BigNumber(rewardTokenPrice).times(tokenPerBlock).times(BLOCKS_PER_YEAR)
   const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked)
-  const apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100).div(10000)
+  const apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(700)
   return apy.isNaN() || !apy.isFinite() ? null : apy.toNumber()
 }
 

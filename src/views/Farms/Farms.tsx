@@ -168,7 +168,7 @@ const Farms: React.FC = () => {
         const cakeRewardPerYear = cakeRewardPerBlock.times(BLOCKS_PER_YEAR)
 
         // cakePriceInQuote * cakeRewardPerYear / lpTotalInQuoteToken
-        let apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).div(8)
+        let apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(30)
 
         if (farm.quoteTokenSymbol === QuoteToken.BUSD || farm.quoteTokenSymbol === QuoteToken.UST) {
           apy = cakePriceVsBNB.times(cakeRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
