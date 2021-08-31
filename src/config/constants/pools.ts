@@ -8,8 +8,8 @@ const pools: PoolConfig[] = [
     stakingTokenName: QuoteToken.CAKE,
     stakingTokenAddress: '0xEbC781670DA4D22Ff539a95b13C6A54c08517A19',
     contractAddress: {
-      97: '0xb8717207eF2A9c0cA2a8040f4a7108CeF3ca93E8',
-      56: '0xb8717207eF2A9c0cA2a8040f4a7108CeF3ca93E8',
+      97: '0xDB1FFeF47c03e86102878A1Ea874abFf70509d8F',
+      56: '0xDB1FFeF47c03e86102878A1Ea874abFf70509d8F',
     },
     poolCategory: PoolCategory.CORE,
     projectLink: 'https://pancakeswap.finance/',
